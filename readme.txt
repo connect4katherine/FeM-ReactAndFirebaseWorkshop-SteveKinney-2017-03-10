@@ -51,7 +51,10 @@
      - data we persist
      - information about the application
 
+**** rendering
 
+     Instead of rendering on the change, render when the data gets
+     updated in Firebase.
 
 ** Stuff
 
