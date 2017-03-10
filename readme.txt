@@ -35,6 +35,24 @@
 
 
 
+*** Firebase Auth
+
+    ~auth~ represents the currently authorized user
+
+    Look into rules simulator for checking rules
+
+
+*** Firebase and Redux: Why?
+
+    Could import firebase directly into each component, why do we need
+    redux?
+
+**** Two sorts of *state*:
+     - data we persist
+     - information about the application
+
+
+
 ** Stuff
 
    - link: [[https://github.com/tiberiuc/redux-react-firebase][tiberiuc/redux-react-firebase: Use Firebase with React and Redux in ES6]]
