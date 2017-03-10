@@ -1,7 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import FileInput from 'react-file-input';
-import { storage, database } from './firebase';
-import './ProfileCard.css';
+import React, {Component, PropTypes} from "react";
+import "./ProfileCard.css";
 
 class ProfileCard extends Component {
   constructor(props) {
@@ -9,8 +7,18 @@ class ProfileCard extends Component {
   }
 
   render() {
+    const {displayName, photoURL} = this.props.user;
+    console.log(photoURL);
     return (
       <article className="ProfileCard">
+        <img
+          className="ProfileCard--photo"
+          src={ photoURL }
+        />
+        <h3>{ displayName }</h3>
+        <button>
+          Upload Spirit Animal
+        </button>
       </article>
     );
   }
