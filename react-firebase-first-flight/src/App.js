@@ -32,9 +32,11 @@ class App extends Component {
     handleSubmit(event) {
         event.preventDefault();
         database
-            .ref()
-            .child('AmazingNewData')
-            .set(this.state.newData);
+            //.ref('/AmazingNewData')   // works like a path
+            //.child('/AmazingNewData') // no longer need this with ref on line above
+            //.set(this.state.newData); // this replaces the contents of the key
+            .ref('/Amazing/New/Data')   // the paths are all created on the way down
+            .push(this.state.newData);  // this appends new data to the key (assigns a random unique key)
     }
 
 
